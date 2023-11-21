@@ -6,12 +6,12 @@ echo copy expense config file in nginx
 cp expense.conf /etc/nginx/default.d/expense.conf >>/tmp/expense.log
 
 echo remove old nginx content
-rm -rf /user/share/nginx/html/* >>/tmp/expense.log
+rm -rf /usr/share/nginx/html/* >>/tmp/expense.log
 
 echo download frontend code
 curl -o /tmp/frontend.zip https://expense-artifacts.s3.amazonaws.com/frontend.zip >>/tmp/expense.log
 
-cd /usr/share/nginx/html
+cd /usr/share/nginx/html >>/tmp/expense.log
 
 echo extracting frontend code
 unzip /tmp/frontend.zip >>/tmp/expense.log
