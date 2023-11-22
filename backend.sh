@@ -29,7 +29,7 @@ download_and_extract
 
 
 echo download dependencies
-npm install >>$log_file
+npm install &>>$log_file
 echo $?
 
 echo start backend service
