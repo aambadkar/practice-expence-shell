@@ -6,13 +6,15 @@ dnf module disable nodejs -y >>$log_file
 dnf module enable nodejs:18 -y >>$log_file
 echo $?
 
-echo copy backend service file
-cp backend.service /etc/systemd/system/backend.service >>$log_file
-echo $?
 
 echo install nodeJS
 dnf install nodejs -y >>$log_file
 echo $?
+
+echo copy backend service file
+cp backend.service /etc/systemd/system/backend.service >>$log_file
+echo $?
+
 
 echo add application user
 useradd expense >>$log_file
