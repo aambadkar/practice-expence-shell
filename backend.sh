@@ -20,9 +20,9 @@ echo $?
 
 echo clean app contents
 rm -rf /app >>$log_file
-mkdir /app
 echo $?
 
+mkdir /app
 cd /app
 
 download_and_extract
