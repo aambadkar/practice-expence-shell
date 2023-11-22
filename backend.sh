@@ -29,7 +29,7 @@ cd /app
 
 download_and_extract
 
-
+cd /app
 echo download dependencies
 npm install &>>$log_file
 echo $?
