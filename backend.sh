@@ -54,6 +54,7 @@ echo download dependencies
 npm install &>>$log_file
 if [ $? -eq 0 ]; then
    echo -e "\e[32mSUCCESS\e[0m"
+else
    echo "\e[31mSUCCESS\e[0m"
 fi
 
