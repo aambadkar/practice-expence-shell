@@ -4,14 +4,10 @@ component=backend
 echo install nodejs repo
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash >>$log_file
 stat_check
-#echo disable node js 10 version
-#dnf module disable nodejs -y >>$log_file
-#dnf module enable nodejs:18 -y >>$log_file
-#if [ $? -eq 0 ]; then
-   #echo SUCCESS
-#else
-   #echo FAILED
-#fi
+echo disable node js 10 version
+dnf module disable nodejs -y >>$log_file
+dnf module enable nodejs:18 -y >>$log_file
+stat_check
 
 
 echo install nodeJS
