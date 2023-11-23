@@ -9,7 +9,11 @@ echo $?
 
 echo install nodeJS
 dnf install nodejs -y >>$log_file
-echo $?
+if [ $? -eq 0 ]; then
+   echo SUCCESS
+else
+   echo FAILED
+fi
 
 echo copy backend service file
 cp backend.service /etc/systemd/system/backend.service >>$log_file
@@ -29,7 +33,7 @@ cd /app
 
 download_and_extract
 
-cd /app
+
 echo download dependencies
 npm install &>>$log_file
 echo $?
