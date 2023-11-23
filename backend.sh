@@ -53,9 +53,8 @@ download_and_extract
 echo download dependencies
 npm install &>>$log_file
 if [ $? -eq 0 ]; then
-   echo SUCCESS
-else
-   echo FAILED
+   echo -e "\e[32mSUCCESS\e[0m"
+   echo "\e[31mSUCCESS\e[0m"
 fi
 
 echo start backend service
